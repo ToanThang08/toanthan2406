@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fly
+  m_Name: fall
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -457252039, guid: 63b0b2f1bd7fda94a9136d2583d76735, type: 3}
+      value: {fileID: 132541555, guid: 63b0b2f1bd7fda94a9136d2583d76735, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -457252039, guid: 63b0b2f1bd7fda94a9136d2583d76735, type: 3}
+    - {fileID: 132541555, guid: 63b0b2f1bd7fda94a9136d2583d76735, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
