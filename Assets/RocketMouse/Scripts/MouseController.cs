@@ -29,12 +29,15 @@ public class MouseController : MonoBehaviour
     public AudioSource footstepsAudio;
 
     public ParallaxScroll parallax;
+    public Text coinsLabel;
+    public GameObject restartDialog;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         mouseAnimator = GetComponent<Animator>();
+        restartDialog.SetActive(false);
     }
 
     void UpdateGroundedStatus()
@@ -112,6 +115,7 @@ public class MouseController : MonoBehaviour
             AudioSource laserZap = laserCollider.gameObject.GetComponent<AudioSource>();
             laserZap.Play();
         }
+        restartDialog.SetActive(true);
     }
 
     void CollectCoin(Collider2D coinCollider)
@@ -120,11 +124,7 @@ public class MouseController : MonoBehaviour
         coinsCollectedLabel.text = coins.ToString();
         Destroy(coinCollider.gameObject);
         AudioSource.PlayClipAtPoint(coinsCollectSound, transform.position);
-    }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene("RocketMouse");
+        coinsLabel.text = coins.ToString();
     }
 
     void AdjustFootstepsAndJetpackSound(bool jetpackActive)
@@ -140,5 +140,16 @@ public class MouseController : MonoBehaviour
             jetpackAudio.volume = 0.5f;
         }
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ExitToMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
 
 }
