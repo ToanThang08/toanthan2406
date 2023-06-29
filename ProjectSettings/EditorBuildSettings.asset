@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/RW/Scenes/MenuScene.unity
+    guid: 3b1f63d10e65c6148ac8bc90c37d61aa
+  - enabled: 1
+    path: Assets/RW/Scenes/RocketMouse.unity
+    guid: 679aa0f77ed9f8348bc42a7d0ac401c4
   m_configObjects: {}
